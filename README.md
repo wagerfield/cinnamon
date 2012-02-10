@@ -2,7 +2,9 @@
 
 A simple, lean front-end boilerplate to help kick off your project.
 
-##Contributers:
+##Contributors:
+
+Justin Windle: https://twitter.com/#!/soulwire
 
 Matthew Wagerfield: https://twitter.com/#!/mwagerfield
 
