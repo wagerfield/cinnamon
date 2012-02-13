@@ -7,5 +7,7 @@ A simple, lightweight front-end boilerplate to help kick start your projects.
 ###Contributors:
 
 Matthew Wagerfield: https://twitter.com/#!/mwagerfield
+
 Darcy Clarke: https://twitter.com/#!/darcy_clarke
+
 Justin Windle: https://twitter.com/#!/soulwire
