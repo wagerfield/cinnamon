@@ -1,11 +1,11 @@
 #Cinnamon Boilerplate
 
-A simple, lean front-end boilerplate to help kick off your project.
+A simple, lightweight front-end boilerplate to help kick start your projects.
 
-##Contributors:
+* Scaleable directory structure with clear partitions between thirdparty libraries, plugins and project files.
 
-Justin Windle: https://twitter.com/#!/soulwire
+###Contributors:
 
 Matthew Wagerfield: https://twitter.com/#!/mwagerfield
-
 Darcy Clarke: https://twitter.com/#!/darcy_clarke
+Justin Windle: https://twitter.com/#!/soulwire
