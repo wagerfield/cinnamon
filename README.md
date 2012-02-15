@@ -46,7 +46,7 @@ Function/Block Comments
  */
 ```
 
-Single Line Comments*
+Single Line Comments
 
 ```javascript
 /**
