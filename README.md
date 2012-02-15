@@ -26,6 +26,7 @@ We suggest using Justin Windle's Springboard library which utilizes a comprehens
 ```
 
 *Single Line Comments*
+
 ```css
 // Secondary Navigation
 ```
@@ -33,6 +34,7 @@ We suggest using Justin Windle's Springboard library which utilizes a comprehens
 ##JavaScript Formatting
 
 *Function/Block Comments*
+
 ```javascript
 /**
  * Subscribe to an event with callback
@@ -44,6 +46,7 @@ We suggest using Justin Windle's Springboard library which utilizes a comprehens
 ```
 
 *Single Line Comments*
+
 ```javascript
 /**
  * Check if user's logged in
