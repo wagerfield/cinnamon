@@ -14,7 +14,7 @@ Justin Windle: https://twitter.com/#!/soulwire
 
 ##Build Script
 
-We suggest using Justin Windle's Springboard library which utilizes a comprehensive build script actively in development. You can read more and download the repository here: http://blog.soulwire.co.uk/laboratory/javascript/springboard-javascript-css-html-template
+We suggest using Justin Windle's Springboard library which utilizes a comprehensive build script actively in development. You can read more and download the repository here: https://github.com/soulwire/Springboard
 
 ##LESS Formatting
 
