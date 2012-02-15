@@ -18,14 +18,15 @@ We suggest using Justin Windle's Springboard library which utilizes a comprehens
 
 ##LESS Formatting
 
-*Section/Block Comments*
+Section/Block Comments
+
 ```css
 //============================================================
 // Helpers
 //============================================================
 ```
 
-*Single Line Comments*
+Single Line Comments
 
 ```css
 // Secondary Navigation
@@ -33,7 +34,7 @@ We suggest using Justin Windle's Springboard library which utilizes a comprehens
 
 ##JavaScript Formatting
 
-*Function/Block Comments*
+Function/Block Comments
 
 ```javascript
 /**
@@ -45,7 +46,7 @@ We suggest using Justin Windle's Springboard library which utilizes a comprehens
  */
 ```
 
-*Single Line Comments*
+Single Line Comments*
 
 ```javascript
 /**
