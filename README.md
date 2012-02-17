@@ -12,10 +12,6 @@ Darcy Clarke: https://twitter.com/#!/darcy_clarke
 
 Justin Windle: https://twitter.com/#!/soulwire
 
-##Build Script
-
-We suggest using Justin Windle's Springboard library which utilizes a comprehensive build script actively in development. You can read more and download the repository here: https://github.com/soulwire/Springboard
-
 ##LESS Formatting
 
 Section/Block Comments
