@@ -23,12 +23,16 @@
 //
 // Transformation:
 // @mixin transform
+// @mixin transform-origin
+// @mixin transform-style
+// @mixin perspective
+// @mixin perspective-origin
+// @mixin backface-visibility
 // @mixin matrix
 // @mixin translate
 // @mixin scale
 // @mixin rotate
 // @mixin skew
-// @mixin backface-visibility
 //
 // Animation:
 // @mixin transition
@@ -42,9 +46,9 @@
 //
 // box-sizing
 //
-// @param value               :  content-box ||
-//                               padding-box ||
-//                               border-box  || 
+// @param value               :  content-box |
+//                               padding-box |
+//                               border-box  | 
 //                               inherit
 //
 // @see http://www.w3.org/TR/css3-ui/#box-sizing
@@ -205,6 +209,116 @@
 
 //============================================================
 //
+// transform-origin
+//
+// @param value               :  left   | 
+//                               center | 
+//                               right  | 
+//                               px     |
+//                               em     |
+//                               %;
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#transform-origin-property
+//
+//============================================================
+
+.transform-origin() {
+    -webkit-transform-origin: @arguments;
+       -moz-transform-origin: @arguments;
+        -ms-transform-origin: @arguments;
+         -o-transform-origin: @arguments;
+            transform-origin: @arguments;
+}
+
+
+
+//============================================================
+//
+// transform-style
+//
+// @param value               :  preserve-3d | flat;
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#transform-style-property
+//
+//============================================================
+
+.transform-style() {
+    -webkit-transform-style: @arguments;
+       -moz-transform-style: @arguments;
+        -ms-transform-style: @arguments;
+         -o-transform-style: @arguments;
+            transform-style: @arguments;
+}
+
+
+
+//============================================================
+//
+// perspective
+//
+// @param value               :  none | 0, 1, 100, 1000, etc;
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#perspective-property
+//
+//============================================================
+
+.perspective() {
+    -webkit-perspective: @arguments;
+       -moz-perspective: @arguments;
+        -ms-perspective: @arguments;
+         -o-perspective: @arguments;
+            perspective: @arguments;
+}
+
+
+
+//============================================================
+//
+// perspective-origin
+//
+// @param value               :  left   | 
+//                               center | 
+//                               right  | 
+//                               px     |
+//                               em     |
+//                               %;
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#perspective-origin-property
+//
+//============================================================
+
+.perspective-origin() {
+    -webkit-perspective-origin: @arguments;
+       -moz-perspective-origin: @arguments;
+        -ms-perspective-origin: @arguments;
+         -o-perspective-origin: @arguments;
+            perspective-origin: @arguments;
+}
+
+
+
+//============================================================
+//
+// backface-visibility
+//
+// @param value               :  visible | hidden;
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#backface-visibility-property
+//
+//============================================================
+
+.backface-visibility() {
+    -webkit-backface-visibility: @arguments;
+       -moz-backface-visibility: @arguments;
+        -ms-backface-visibility: @arguments;
+         -o-backface-visibility: @arguments;
+            backface-visibility: @arguments;
+}
+
+
+
+//============================================================
+//
 // matrix
 //
 // @param a                   :  Number;
@@ -214,7 +328,7 @@
 // @param e                   :  Number;
 // @param f                   :  Number;
 //
-// @see http://www.w3.org/TR/css3-2d-transforms/
+// http://www.w3.org/TR/css3-3d-transforms/#transform-functions
 //
 //============================================================
 
@@ -235,7 +349,7 @@
 // @param translate-x         :  px;
 // @param translate-y         :  px;
 //
-// @see http://www.w3.org/TR/css3-2d-transforms/
+// http://www.w3.org/TR/css3-3d-transforms/#transform-functions
 //
 //============================================================
 
@@ -256,7 +370,7 @@
 // @param scale-x             :  0.5, 2, etc;
 // @param scale-y             :  0.5, 2, etc;
 //
-// @see http://www.w3.org/TR/css3-2d-transforms/
+// http://www.w3.org/TR/css3-3d-transforms/#transform-functions
 //
 //============================================================
 
@@ -276,7 +390,7 @@
 //
 // @param angle               :  0deg;
 //
-// @see http://www.w3.org/TR/css3-2d-transforms/
+// http://www.w3.org/TR/css3-3d-transforms/#transform-functions
 //
 //============================================================
 
@@ -297,7 +411,7 @@
 // @param axis-x              :  0deg;
 // @param axis-y              :  0deg;
 //
-// @see http://www.w3.org/TR/css3-2d-transforms/
+// http://www.w3.org/TR/css3-3d-transforms/#transform-functions
 //
 //============================================================
 
@@ -307,26 +421,6 @@
         -ms-transform: skew(@arguments);
          -o-transform: skew(@arguments);
             transform: skew(@arguments);
-}
-
-
-
-//============================================================
-//
-// backface-visibility
-//
-// @param visibility          :  visible | hidden;
-//
-// @see http://www.w3.org/TR/css3-3d-transforms/
-//
-//============================================================
-
-.backface-visibility() {
-    -webkit-backface-visibility: @arguments;
-       -moz-backface-visibility: @arguments;
-        -ms-backface-visibility: @arguments;
-         -o-backface-visibility: @arguments;
-            backface-visibility: @arguments;
 }
 
 
