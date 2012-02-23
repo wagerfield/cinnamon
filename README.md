@@ -5,18 +5,19 @@
 * Scaleable directory structure with clear partitions between thirdparty libraries, plugins and project files.
 * Heavy focus on structural granularity with intuitive delegation of responsibility.
 * Packed with plenty of goodies to help make your site awesome!
-** HTML5 template
-** jQuery
-** Robert Penner's easing functions
-** requestAnimationFrame polyfill
-** reset.less
-** helpers.less
-** css3.less
+		* HTML5 template
+		* jQuery
+		* Robert Penner's easing functions
+		* requestAnimationFrame polyfill
+		* reset.less
+		* helpers.less
+		* css3.less
 * Integrates seamlessly with CodeKit for all your compilation and minification needs.
 
 ##Contributors:
 
 Matthew Wagerfield: [Follow on Twitter](https://twitter.com/#!/mwagerfield)
+
 Darcy Clarke: [Follow on Twitter](https://twitter.com/#!/darcy_clarke)
 
 ##Suggested Usage
