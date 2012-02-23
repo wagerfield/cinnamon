@@ -341,8 +341,24 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   color: #252525;
+}
+a {
+  -webkit-transition: color 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: color 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: color 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: color 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: color 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+a:link,
+a:visited {
+  color: #1122cc;
+}
+a:hover,
+a:active {
+  color: #6a76f3;
 }
 @media only screen and (min-width: 480px) {
   

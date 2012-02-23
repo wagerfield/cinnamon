@@ -2,9 +2,9 @@
  * Create namespaces.
  */
 var com = {
-	domain: {
+    domain: {
 
-	}
+    }
 };
 
 /**
@@ -14,20 +14,19 @@ var com = {
  */
 com.domain.Project = (function() {
 
-	/**
+    /**
      * Initialises the project.
      */
-	function initialise() {
+    function initialise() {
 
-		console.log('Initialise Project');
-	}
+        console.log('Initialise Project');
+    }
 
-	/**
+    /**
      * Return the API.
      */
-	return {
-		initialise: initialise
-	};
+    return {
+        initialise: initialise
+    };
 
 }());
-
