@@ -16,7 +16,7 @@ Darcy Clarke: [Follow on Twitter](https://twitter.com/#!/darcy_clarke)
 ##Suggested Usage
 
 * Work with the structure, not against it. Considerable time and thought has been invested in the structure of this boilerplate with the core focus on consistency, granularity and scalability.
-* A *graphics* folder and an *images* folder, what's that all about? In a nutshell, if it's referenced as a background-image, it goes in the graphics folder. If it's referenced as the src of an <img> element, it goes in the images folder.
+* A *graphics* folder and an *images* folder, what's that all about? In a nutshell, if it's referenced as a background-image, it goes in the graphics folder. If it's referenced as the src of an img element, it goes in the images folder.
 * Keep it consistent and adopt the conventions laid out before you. If you are embedding plugins such as SWFs, put them in a embeds folder. If you are referencing videos, put them in a videos folder.
 * If you own a Mac, get [CodeKit](http://incident57.com/codekit/). It will literally change your developing life.
 
