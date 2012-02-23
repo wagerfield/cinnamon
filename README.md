@@ -5,7 +5,7 @@
 * Scaleable directory structure with clear partitions between thirdparty libraries, plugins and project files.
 * Heavy focus on structural granularity with intuitive delegation of responsibility.
 * Packed with plenty of goodies including an HTML5 template, jQuery, requestAnimationFrame polyfill & css3.less to help make your site awesome!
-* Integrates seamlessly with [CodeKit](http://incident57.com/codekit/) for all your compilation and minification needs.
+* Integrates seamlessly with [CodeKit](http://incident57.com/codekit/) for all your concatenation and minification needs.
 
 ##Contributors:
 
