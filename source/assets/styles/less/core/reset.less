@@ -292,14 +292,16 @@ p {
   margin: 0px;
 }
 
+@selectionColor: #fc362d;
+
 ::-moz-selection {
-  background: #fc362d;
+  background: @selectionColor;
   color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #fc362d;
+  background: @selectionColor;
   color: #fff;
   text-shadow: none;
 }

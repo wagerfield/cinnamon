@@ -1,16 +1,30 @@
 #Cinnamon Boilerplate
 
-A simple, lightweight front-end boilerplate to help kick start your projects.
+####A simple, lightweight boilerplate to help kick start your front-end projects.
 
 * Scaleable directory structure with clear partitions between thirdparty libraries, plugins and project files.
+* Heavy focus on structural granularity with intuitive delegation of responsibility.
+* Packed with plenty of goodies to help make your site awesome!
+** HTML5 template
+** jQuery
+** Robert Penner's easing functions
+** requestAnimationFrame polyfill
+** reset.less
+** helpers.less
+** css3.less
+* Integrates seamlessly with CodeKit for all your compilation and minification needs.
 
-###Contributors:
+##Contributors:
 
-Matthew Wagerfield: https://twitter.com/#!/mwagerfield
+Matthew Wagerfield: [Follow on Twitter](https://twitter.com/#!/mwagerfield)
+Darcy Clarke: [Follow on Twitter](https://twitter.com/#!/darcy_clarke)
 
-Darcy Clarke: https://twitter.com/#!/darcy_clarke
+##Suggested Usage
 
-Justin Windle: https://twitter.com/#!/soulwire
+* Work with the structure, not against it. Considerable time and thought has been invested in the structure of this boilerplate with the core focus on consistency, granularity and scalability.
+* A *graphics* folder and an *images* folder, what's that all about? In a nutshell, if it's referenced as a background-image, it goes in the graphics folder. If it's referenced as the src of an <img> element, it goes in the images folder.
+* Keep it consistent and adopt the conventions laid out before you. If you are embedding plugins such as SWFs, put them in a embeds folder. If you are referencing videos, put them in a videos folder.
+* If you own a Mac, get [CodeKit](http://incident57.com/codekit/). It will literally change your developing life.
 
 ##LESS Formatting
 
@@ -18,14 +32,14 @@ Section/Block Comments
 
 ```css
 //============================================================
-// Helpers
+// Typography
 //============================================================
 ```
 
 Single Line Comments
 
 ```css
-// Secondary Navigation
+// Navigation
 ```
 
 ##JavaScript Formatting
@@ -34,11 +48,11 @@ Function/Block Comments
 
 ```javascript
 /**
- * Subscribe to an event with callback
+ * Subscribe to an event with callback.
  * 
- * @param {String} topic 
- * @param {Function} callback function
- * @returns {Object} handler
+ * @param {String} key Dictionary key.
+ * @param {Function} callback Function to call if found.
+ * @returns {Boolean} success Whether or not a value was found.
  */
 ```
 
@@ -46,7 +60,7 @@ Single Line Comments
 
 ```javascript
 /**
- * Check if user's logged in
+ * Check if the user is logged in.
  */
 ```
 

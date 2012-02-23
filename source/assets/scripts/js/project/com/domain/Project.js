@@ -1,22 +1,33 @@
-// Namespace
+/**
+ * Create namespaces.
+ */
 var com = {
 	domain: {
 
 	}
 };
 
-// Main Class
+/**
+ * @class Description of the class.
+ * @author firstname.surname@domain.com (Firstname Surname)
+ * @this {com.domain.Project}
+ */
 com.domain.Project = (function() {
 
+	/**
+     * Initialises the project.
+     */
 	function initialise() {
 
 		console.log('Initialise Project');
-
 	}
 
-	// API
+	/**
+     * Return the API.
+     */
 	return {
 		initialise: initialise
 	};
 
 }());
+
