@@ -15,7 +15,7 @@
 
 ## Author
 
-Matthew Wagerfield: [@mwagerfield][twitter]
+Matthew Wagerfield: [@mwagerfield][mwagerfield]
 
 ## Contributors
 
