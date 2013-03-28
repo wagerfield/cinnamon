@@ -1,0 +1,38 @@
+//============================================================
+//
+// Helper SASS
+//
+// @description Provides some helper classes for common tasks
+// @version 1.00
+//
+// @author matthew@wagerfield.com (Matthew Wagerfield)
+//
+//============================================================
+
+.ir
+  color: transparent!important
+  text-shadow: none!important
+  font: 0/0 a!important
+  text-indent: -999em
+
+  br
+    display: none
+
+.invisible
+  visibility: hidden
+
+.clearfix
+  zoom: 1
+
+  &:after,
+  &:before
+    display: table
+    content: ""
+
+  &:after
+    clear: both
+
+.unselectable
+  -webkit-touch-callout: none
+  -webkit-user-drag: none
+  +user-select(none)

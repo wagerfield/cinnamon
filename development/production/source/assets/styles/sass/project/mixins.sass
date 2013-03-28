@@ -1,0 +1,144 @@
+//============================================================
+//
+// Mixins
+//
+// @description Defines project related variables and mixins
+// @version 1.00
+//
+// @author matthew@wagerfield.com (Matthew Wagerfield)
+//
+// ---------- INDEX ----------
+//
+// @mixin spritesheet
+// @mixin graphic
+// @mixin text
+// @mixin antialias
+// @mixin pseudo-element
+// @mixin overlay
+//
+//============================================================
+
+
+
+//============================================================
+//
+// spritesheet
+//
+// @param x               :  px, em, %
+// @param y               :  px, em, %
+// @param repeat          :  repeat, no-repeat
+//
+//============================================================
+
+=spritesheet($x: 0px, $y: 0px, $repeat: no-repeat)
+  background: transparent url("#{$GRAPHICS}spritesheet.png") $x $y $repeat
+
+
+
+//============================================================
+//
+// graphic
+//
+// @param width           :  px
+// @param height          :  px
+// @param originX         :  px
+// @param originY         :  px
+// @param indexX          :  Number
+// @param indexY          :  Number
+// @param offsetX         :  px
+// @param offsetY         :  px
+// @param target          :  @Inline | @Before | @After
+//
+//============================================================
+
+=crop($width, $height, $originX, $originY, $indexX, $indexY, $offsetX, $offsetY)
+  +spritesheet(($originX - $width * $indexX), ($originY - $height * $indexY))
+  position: absolute
+  display: block
+  height: $height
+  width: $width
+  left: $offsetX
+  top: $offsetY
+
+=graphic($width, $height, $originX, $originY, $indexX, $indexY, $offsetX, $offsetY, $target)
+
+  // Inline
+  @if $target == $INLINE
+    +crop($width, $height, $originX, $originY, $indexX, $indexY, $offsetX, $offsetY)
+
+  // Before
+  @if $target == $BEFORE
+    position: relative
+    &:before
+      +crop($width, $height, $originX, $originY, $indexX, $indexY, $offsetX, $offsetY)
+      content: ""
+
+  // After
+  @if $target == $AFTER
+    position: relative
+    &:after
+      +crop($width, $height, $originX, $originY, $indexX, $indexY, $offsetX, $offsetY)
+      content: ""
+
+
+
+//============================================================
+//
+// rem
+//
+// @param key               : property
+// @param px                : pixel value
+//
+//============================================================
+
+=rem($key, $px)
+  #{$key}: $px
+  #{$key}: $px / $remRatio
+
+
+
+//============================================================
+//
+// text
+//
+// @param family            : defaultFontFamily
+// @param size              : defaultFontSize
+// @param color             : defaultTextColor
+// @param weight            : normal | bold | number
+// @param style             : normal | italic
+// @param decoration        : none | underline | strikethrough
+// @param lineHeight        : normal | pixel value
+// @param variant           : normal | small-caps | inherit
+//
+//============================================================
+
+=text($family: $DEFAULT_FONT_FAMILY, $size: $DEFAULT_FONT_SIZE, $color: $DEFAULT_TEXT_COLOR, $weight: normal, $style: normal, $decoration: none, $lineHeight: normal, $variant: normal)
+
+  $lineHeightType: type-of($lineHeight)
+  $calculatedFontSize: $size / $BASE_FONT_SIZE
+  $calculatedLineHeight: null
+
+  @if $lineHeightType == number
+    $calculatedLineHeight: #{$lineHeight / $BASE_FONT_SIZE}rem
+  @else
+    $calculatedLineHeight: $lineHeight
+
+  font: $style $variant $weight #{$calculatedFontSize}rem / $calculatedLineHeight $family
+  text-decoration: $decoration
+  color: $color
+
+
+
+//============================================================
+//
+// antialias
+//
+// @param value         : true | false
+//
+//============================================================
+
+=antialias($value: true)
+  @if $value == true
+    -webkit-font-smoothing: antialiased
+  @else
+    -webkit-font-smoothing: auto

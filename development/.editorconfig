@@ -1,0 +1,16 @@
+# Root
+root = true
+
+# Global
+[*]
+end_of_line = LF
+indent_style = space
+indent_size = 2
+
+# JavaScript
+[**.js]
+indent_size = 4
+
+# Python
+[**.py]
+indent_size = 4
