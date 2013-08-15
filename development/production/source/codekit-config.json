@@ -62,13 +62,13 @@
       "fileType" : 64
     },
     "\/assets\/scripts\/js\/libraries\/cssua\/cssua.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/cssua\/cssua.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
+      "outputStyle" : 0,
+      "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/cssua\/cssua.min-ck.js",
       "fileType" : 64
     },
@@ -117,16 +117,17 @@
       "fileType" : 2,
       "debugStyle" : 0
     },
-    "\/assets\/scripts\/js\/libraries\/cssua\/cssua.js" : {
+    "\/assets\/styles\/sass\/project\/cinema.sass" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/cssua\/cssua.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/cssua\/cssua-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/assets\/styles\/sass\/project\/cinema.sass",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/styles\/sass\/css\/cinema.css",
+      "fileType" : 2,
+      "debugStyle" : 0
     },
     "\/assets\/styles\/sass\/project\/retina.sass" : {
       "ignoreWasSetByUser" : 0,
@@ -140,17 +141,16 @@
       "fileType" : 2,
       "debugStyle" : 0
     },
-    "\/assets\/styles\/sass\/project\/cinema.sass" : {
-      "ignoreWasSetByUser" : 0,
+    "\/assets\/scripts\/js\/libraries\/cssua\/cssua.js" : {
+      "ignoreWasSetByUser" : 1,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/styles\/sass\/project\/cinema.sass",
+      "inputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/cssua\/cssua.js",
       "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/styles\/sass\/css\/cinema.css",
-      "fileType" : 2,
-      "debugStyle" : 0
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/cssua\/cssua-ck.js",
+      "fileType" : 64
     },
     "\/assets\/styles\/sass\/project\/constants.sass" : {
       "ignoreWasSetByUser" : 0,
@@ -187,17 +187,17 @@
       "initialSize" : 2868,
       "fileType" : 8192
     },
-    "\/assets\/scripts\/coffee\/core\/Utils.coffee" : {
+    "\/assets\/styles\/sass\/project\/mixins.sass" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Utils.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Utils.js",
+      "inputAbbreviatedPath" : "\/assets\/styles\/sass\/project\/mixins.sass",
       "outputStyle" : 0,
-      "fileType" : 32
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/styles\/sass\/css\/mixins.css",
+      "fileType" : 2,
+      "debugStyle" : 0
     },
     "\/assets\/scripts\/coffee\/core\/Math.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -246,17 +246,17 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/assets\/styles\/sass\/project\/mixins.sass" : {
+    "\/assets\/scripts\/coffee\/core\/Utils.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/styles\/sass\/project\/mixins.sass",
+      "inputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Utils.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Utils.js",
       "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/styles\/sass\/css\/mixins.css",
-      "fileType" : 2,
-      "debugStyle" : 0
+      "fileType" : 32
     },
     "\/assets\/scripts\/js\/libraries\/underscore\/underscore.js" : {
       "ignoreWasSetByUser" : 1,
@@ -278,6 +278,18 @@
       "checkOutputStyle" : 0,
       "minifyOutput" : 1,
       "outputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Color.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/assets\/scripts\/coffee\/scripts.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/assets\/scripts\/coffee\/scripts.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/assets\/scripts\/js\/scripts.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -303,18 +315,6 @@
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/jquery\/jquery.min-ck.js",
       "fileType" : 64
-    },
-    "\/assets\/scripts\/coffee\/scripts.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/assets\/scripts\/coffee\/scripts.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/assets\/scripts\/js\/scripts.js",
-      "outputStyle" : 0,
-      "fileType" : 32
     },
     "\/assets\/styles\/sass\/project\/mobile.sass" : {
       "ignoreWasSetByUser" : 0,
@@ -384,17 +384,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/apple-touch-icon-144x144-precomposed.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/apple-touch-icon-144x144-precomposed.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/apple-touch-icon-144x144-precomposed.png",
-      "initialSize" : 3006,
-      "fileType" : 8192
-    },
     "\/assets\/styles\/sass\/project\/print.sass" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -406,6 +395,17 @@
       "outputAbbreviatedPath" : "\/assets\/styles\/sass\/css\/print.css",
       "fileType" : 2,
       "debugStyle" : 0
+    },
+    "\/apple-touch-icon-144x144-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/apple-touch-icon-144x144-precomposed.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/apple-touch-icon-144x144-precomposed.png",
+      "initialSize" : 3006,
+      "fileType" : 8192
     },
     "\/assets\/scripts\/js\/libraries\/jquery\/jquery.js" : {
       "ignoreWasSetByUser" : 1,
