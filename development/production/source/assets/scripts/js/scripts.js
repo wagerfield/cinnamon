@@ -2,7 +2,7 @@
 /*
 #============================================================
 #
-# Math augmentation.
+# Math Augmentation
 #
 # @author Matthew Wagerfield @mwagerfield
 #
@@ -185,7 +185,7 @@
   /*
   #============================================================
   #
-  # Easing functions.
+  # Easing Functions
   #
   # @param {number} t Time.
   # @param {number} d Duration.
@@ -323,10 +323,7 @@
   /*
   #============================================================
   #
-  # Collection of colour methods.
-  #
-  # @requires three.js
-  # @see https://github.com/mrdoob/three.js/
+  # Colour Methods
   #
   # @author Matthew Wagerfield @mwagerfield
   #
@@ -912,7 +909,7 @@
   /*
   #============================================================
   #
-  # Danbo: Main Class
+  # Cinammon: Main Class
   #
   # @author Matthew Wagerfield @mwagerfield
   #
@@ -986,7 +983,7 @@
 
 
   $(function() {
-    return DANBO.initialise();
+    return CINNAMON.initialise();
   });
 
 }).call(this);

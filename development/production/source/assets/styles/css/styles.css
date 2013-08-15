@@ -47,39 +47,12 @@ a:hover,
 a:active {
   outline: 0; }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0; }
-
-h3 {
-  font-size: 1.17em;
-  margin: 1em 0; }
-
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0; }
-
-h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0; }
-
-h6 {
-  font-size: 0.75em;
-  margin: 2.33em 0; }
-
 abbr[title] {
   border-bottom: 1px dotted; }
 
 b,
 strong {
   font-weight: bold; }
-
-blockquote {
-  margin: 1em 40px; }
 
 dfn {
   font-style: italic; }
@@ -88,10 +61,6 @@ mark {
   background: yellow;
   color: black; }
 
-p,
-pre {
-  margin: 1em 0; }
-
 pre,
 code,
 kbd,
@@ -99,11 +68,6 @@ samp {
   font-family: monospace, serif;
   _font-family: "courier new", monospace;
   font-size: 1em; }
-
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
 
 q {
   quotes: none; }
@@ -247,26 +211,58 @@ table {
     clear: both; }
 
 .unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-drag: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
   touch-callout: none; }
 
+@font-face {
+  font-family: "icons";
+  src: url("../../fonts/icons/icons.eot");
+  src: url("../../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../../fonts/icons/icons.woff") format("woff"), url("../../fonts/icons/icons.ttf") format("truetype"), url("../../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+::selection {
+  text-shadow: none;
+  background: black;
+  color: white; }
+
+::-moz-selection {
+  text-shadow: none;
+  background: black;
+  color: white; }
+
 html {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 12px; }
+  font-size: 16px; }
 
 body {
-  color: #222222;
-  -webkit-font-smoothing: antialiased; }
+  text-rendering: optimizeLegibility; }
 
-::selection,
-::-moz-selection {
-  background: #66ddff;
-  text-shadow: none;
-  color: white; }
+.ua-desktop .accelerate,
+.ua-mobile-ipod .accelerate,
+.ua-mobile-ipad .accelerate,
+.ua-mobile-iphone .accelerate {
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+@media all and (min-width: 400px) {
+  html {
+    font-size: 16px; } }
+@media all and (min-width: 600px) {
+  html {
+    font-size: 18px; } }
+@media all and (min-width: 900px) {
+  html {
+    font-size: 20px; } }
+@media all and (min-width: 1200px) {
+  html {
+    font-size: 22px; } }

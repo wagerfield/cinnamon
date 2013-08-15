@@ -1,7 +1,7 @@
 ###
 #============================================================
 #
-# Easing functions.
+# Easing Functions
 #
 # @param {number} t Time.
 # @param {number} d Duration.

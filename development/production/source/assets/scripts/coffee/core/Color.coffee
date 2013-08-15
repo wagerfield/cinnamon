@@ -1,10 +1,7 @@
 ###
 #============================================================
 #
-# Collection of colour methods.
-#
-# @requires three.js
-# @see https://github.com/mrdoob/three.js/
+# Colour Methods
 #
 # @author Matthew Wagerfield @mwagerfield
 #

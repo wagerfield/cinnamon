@@ -30,4 +30,4 @@
 
 
 # Initialise the project.
-$ -> DANBO.initialise()
+$ -> CINNAMON.initialise()

@@ -1,7 +1,7 @@
 ###
 #============================================================
 #
-# Math augmentation.
+# Math Augmentation
 #
 # @author Matthew Wagerfield @mwagerfield
 #

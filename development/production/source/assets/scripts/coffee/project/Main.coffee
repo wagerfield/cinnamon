@@ -1,7 +1,7 @@
 ###
 #============================================================
 #
-# Danbo: Main Class
+# Cinammon: Main Class
 #
 # @author Matthew Wagerfield @mwagerfield
 #
