@@ -2,6 +2,18 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8317",
   "files" : {
+    "\/assets\/scripts\/coffee\/core\/Class.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Class.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Class.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
     "\/assets\/scripts\/coffee\/core\/Base.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -14,15 +26,15 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/assets\/scripts\/coffee\/core\/Class.coffee" : {
+    "\/assets\/scripts\/coffee\/core\/Ease.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Class.coffee",
+      "inputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Ease.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Class.js",
+      "outputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Ease.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -37,18 +49,6 @@
       "outputAbbreviatedPath" : "\/assets\/styles\/sass\/css\/global.css",
       "fileType" : 2,
       "debugStyle" : 0
-    },
-    "\/assets\/scripts\/coffee\/core\/Ease.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Ease.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scripts\/coffee\/core\/Ease.js",
-      "outputStyle" : 0,
-      "fileType" : 32
     },
     "\/assets\/scripts\/js\/scripts.js" : {
       "ignoreWasSetByUser" : 1,
@@ -141,17 +141,6 @@
       "fileType" : 2,
       "debugStyle" : 0
     },
-    "\/assets\/scripts\/js\/libraries\/cssua\/cssua.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/cssua\/cssua.js",
-      "outputStyle" : 0,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/cssua\/cssua-ck.js",
-      "fileType" : 64
-    },
     "\/assets\/styles\/sass\/project\/constants.sass" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -163,6 +152,17 @@
       "outputAbbreviatedPath" : "\/assets\/styles\/sass\/css\/constants.css",
       "fileType" : 2,
       "debugStyle" : 0
+    },
+    "\/assets\/scripts\/js\/libraries\/cssua\/cssua.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/cssua\/cssua.js",
+      "outputStyle" : 0,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/assets\/scripts\/js\/libraries\/cssua\/cssua-ck.js",
+      "fileType" : 64
     },
     "\/assets\/styles\/sass\/project\/desktop.sass" : {
       "ignoreWasSetByUser" : 0,
@@ -211,17 +211,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/assets\/graphics\/spritesheet.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/graphics\/spritesheet.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/graphics\/spritesheet.png",
-      "initialSize" : 1351,
-      "fileType" : 8192
-    },
     "\/assets\/styles\/sass\/mixins\/css3.sass" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -258,6 +247,17 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
+    "\/assets\/graphics\/spritesheet.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/graphics\/spritesheet.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/graphics\/spritesheet.png",
+      "initialSize" : 1351,
+      "fileType" : 8192
+    },
     "\/assets\/scripts\/js\/libraries\/underscore\/underscore.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -281,18 +281,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/assets\/scripts\/coffee\/scripts.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/assets\/scripts\/coffee\/scripts.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/assets\/scripts\/js\/scripts.js",
-      "outputStyle" : 0,
-      "fileType" : 32
-    },
     "\/assets\/styles\/sass\/project\/phablet.sass" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -304,6 +292,18 @@
       "outputAbbreviatedPath" : "\/assets\/styles\/sass\/css\/phablet.css",
       "fileType" : 2,
       "debugStyle" : 0
+    },
+    "\/assets\/scripts\/coffee\/scripts.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/assets\/scripts\/coffee\/scripts.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/assets\/scripts\/js\/scripts.js",
+      "outputStyle" : 0,
+      "fileType" : 32
     },
     "\/assets\/scripts\/js\/libraries\/jquery\/jquery.min.js" : {
       "ignoreWasSetByUser" : 1,
@@ -375,15 +375,6 @@
       "fileType" : 2,
       "debugStyle" : 0
     },
-    "\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/styles\/sass\/project\/print.sass" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -395,6 +386,15 @@
       "outputAbbreviatedPath" : "\/assets\/styles\/sass\/css\/print.css",
       "fileType" : 2,
       "debugStyle" : 0
+    },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/apple-touch-icon-144x144-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
