@@ -6,8 +6,8 @@
 // @see http://sass-lang.com/
 // @version 2.00
 //
-// @author matthew@wagerfield.com (Matthew Wagerfield)
-// @see http://www.wagerfield.com
+// @author Matthew Wagerfield
+// @see http://matthew.wagerfield.com
 // @see http://twitter.com/mwagerfield
 //
 // ---------- INDEX ----------
@@ -21,12 +21,12 @@
 // @mixin box-sizing
 // @mixin user-select
 // @mixin appearance
-// @mixin filter
 //
 // Decoration:
 // @mixin border-radius
 // @mixin box-shadow
 // @mixin text-shadow
+// @mixin hyphens
 // @mixin linear-gradient
 // @mixin radial-gradient
 //
@@ -46,20 +46,7 @@
 // Animation:
 // @mixin transition
 // @mixin animation
-// @mixin keyframes
 // @mixin easing
-//
-// Multi-Columns:
-// @mixin columns
-// @mixin column-count
-// @mixin column-width
-// @mixin column-gap
-// @mixin column-rule
-// @mixin column-break-before
-// @mixin column-break-inside
-// @mixin column-break-after
-// @mixin column-span
-// @mixin column-fill
 //
 //============================================================
 
@@ -68,8 +55,8 @@
 // Default Browser Support
 $defaultWebkitSupport: true
 $defaultFirefoxSupport: true
-$defaultExplorerSupport: true
-$defaultOperaSupport: true
+$defaultExplorerSupport: false
+$defaultOperaSupport: false
 
 
 
@@ -87,13 +74,13 @@ $defaultOperaSupport: true
 //============================================================
 
 =prefix-property($property, $value, $supportWebkit: $defaultWebkitSupport, $supportFirefox: $defaultFirefoxSupport, $supportExplorer: $defaultExplorerSupport, $supportOpera: $defaultOperaSupport)
-  @if $supportWebkit
+  @if $supportWebkit == true
     -webkit-#{$property}: $value
-  @if $supportFirefox
+  @if $supportFirefox == true
     -moz-#{$property}: $value
-  @if $supportExplorer
+  @if $supportExplorer == true
     -ms-#{$property}: $value
-  @if $supportOpera
+  @if $supportOpera == true
     -o-#{$property}: $value
   #{$property}: $value
 
@@ -284,31 +271,6 @@ $defaultOperaSupport: true
 
 //============================================================
 //
-// filter
-//
-// @param filter              :  grayscale
-//                               sepia
-//                               saturate
-//                               hue-rotate
-//                               invert
-//                               opacity
-//                               brightness
-//                               contrast
-//                               blur
-//                               drop-shadow
-//                               url()
-//
-// @see http://www.w3.org/TR/css3-ui/#box-sizing
-//
-//============================================================
-
-=filter($arguments)
-  +prefix-property(filter, unquote($arguments))
-
-
-
-//============================================================
-//
 // border-radius
 //
 // @param top-left-radius     :  px, em, %
@@ -361,6 +323,21 @@ $defaultOperaSupport: true
 
 =text-shadow($arguments)
   +prefix-property(text-shadow, unquote($arguments), false, false, false, false)
+
+
+
+//============================================================
+//
+// hyphens
+//
+// @param value               :  none | manual | auto
+//
+// @see http://www.w3.org/TR/css3-text/#hyphens
+//
+//============================================================
+
+=hyphens($arguments)
+  +prefix-property(hyphens, unquote($arguments))
 
 
 
@@ -648,49 +625,6 @@ $defaultOperaSupport: true
 =animation($arguments)
   +prefix-property(animation, unquote($arguments))
 
-//============================================================
-//
-// keyframes
-//
-// @param name                :  String
-//
-//============================================================
-=keyframes($name)
-  @-webkit-keyframes #{$name}
-    @content
-  @-moz-keyframes #{$name}
-    @content
-  @-ms-keyframes #{$name}
-    @content
-  @keyframes #{$name}
-    @content
-
-//============================================================
-//
-// keyframes
-//
-// @param name                :  String
-//
-// @example +keyframes(fade-out)
-//            0%
-//              opacity: 1
-//            100%
-//              opacity: 0
-//
-// @see http://www.w3.org/TR/css3-animations/
-//
-//============================================================
-
-=keyframes($name)
-  @-webkit-keyframes #{$name}
-    @content
-  @-moz-keyframes #{$name}
-    @content
-  @-ms-keyframes #{$name}
-    @content
-  @keyframes #{$name}
-    @content
-
 
 
 //============================================================
@@ -745,256 +679,6 @@ $easeInOutSine  : cubic-bezier(0.445, 0.050, 0.550, 0.950)
 $easeInBack     : cubic-bezier(0.600, -0.280, 0.735, 0.045)
 $easeOutBack    : cubic-bezier(0.175,  0.885, 0.320, 1.275)
 $easeInOutBack  : cubic-bezier(0.680, -0.550, 0.265, 1.550)
-
-
-
-//============================================================
-//
-// columns
-//
-// @param count               :  Number |
-//                               auto
-// @param size                :  px     |
-//                               em     |
-//                               %
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=columns($arguments)
-  +prefix-property(columns, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-count
-//
-// @param count               :  Number  |
-//                               auto
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-count($arguments)
-  +prefix-property(column-count, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-width
-//
-// @param width               :  px     |
-//                               em     |
-//                               %
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-width($arguments)
-  +prefix-property(column-width, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-gap
-//
-// @param gap                 :  px     |
-//                               em     |
-//                               %      |
-//                               normal
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-gap($arguments)
-  +prefix-property(column-gap, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-rule
-//
-// @param width               :  px     |
-//                               em     |
-//                               %
-// @param type                :  border-style
-// @param color               :  color  |
-//                               transparent
-//
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-rule($arguments)
-  +prefix-property(column-rule, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-rule-color
-//
-// @param color               :  color  |
-//                               transparent
-//
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-rule-color($arguments)
-  +prefix-property(column-rule-color, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-rule-style
-//
-// @param type                :  border-style
-//
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-rule-style($arguments)
-  +prefix-property(column-rule-style, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-rule-width
-//
-// @param width               :  px     |
-//                               em     |
-//                               %
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-rule-width($arguments)
-  +prefix-property(column-rule-width, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-span
-//
-// @param span                :  none   |
-//                               all
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-span($arguments)
-  +prefix-property(column-span, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-fill
-//
-// @param type:               :  balance |
-//                               fill
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-fill($arguments)
-  +prefix-property(column-fill, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-break-before
-//
-// @param type                 : auto         |
-//                               always       |
-//                               avoid        |
-//                               left         |
-//                               right        |
-//                               page         |
-//                               column       |
-//                               avoid-page   |
-//                               avoid-column
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-break-before($arguments)
-  +prefix-property(column-break-before, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-break-inside
-//
-// @param type                 : auto         |
-//                               avoid        |
-//                               avoid-page:  |
-//                               avoid-column
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-break-inside($arguments)
-  +prefix-property(column-break-inside, unquote($arguments))
-
-
-
-//============================================================
-//
-// column-break-after
-//
-// @param type                 : auto         |
-//                               always       |
-//                               avoid        |
-//                               left         |
-//                               right        |
-//                               page         |
-//                               column       |
-//                               avoid-page:  |
-//                               avoid-column
-//
-//
-// @see http://www.w3.org/TR/css3-multicol/
-//
-//============================================================
-
-=column-break-after($arguments)
-  +prefix-property(column-break-after, unquote($arguments))
 
 
 

@@ -1,51 +1,119 @@
 //============================================================
 //
-// Constants
+// Cinnamon: Constants
 //
-// @description Global constants for Toyota Eco Next Globe
+// @description Global constants for Cinnamon
 // @version 1.00
 //
-// @author matthew@wagerfield.com (Matthew Wagerfield)
+// @author Matthew Wagerfield @mwagerfield
 //
 // ---------- INDEX ----------
 //
 // Paths
 // Dimensions
+// Breakpoints
+// Media Queries
 // Colours
 // Font Families
 // Font Weights
-// Defaults
 // Directions
 // Alignments
 // Targets
+// Orientations
+// Animation
 //
 //============================================================
+
+
 
 //----------------------------------------
 // Paths
 //----------------------------------------
 
-$FONTS: "../../fonts/"
-$GRAPHICS: "../../graphics/"
+$GRAPHICS_PATH: "../../graphics/"
+$IMAGES_PATH: "../../images/"
+$FONTS_PATH: "../../fonts/"
+
+
 
 //----------------------------------------
 // Dimensions
 //----------------------------------------
 
-$BASE_FONT_SIZE: 12px
-$REM_RATIO: $BASE_FONT_SIZE / 1rem
+// Global
+$LINE_HEIGHT: 1.5
+
+// iPhone
+$IPHONE4_WIDTH: 320px
+$IPHONE4_HEIGHT: 480px
+$IPHONE5_HEIGHT: 568px
+
+// iPad
+$IPAD_WIDTH: 768px
+$IPAD_HEIGHT: 1024px
+
+// Mobile
+$MOBILE_FONT_SIZE: 16px
+
+// Phablet
+$PHABLET_FONT_SIZE: 16px
+
+// Tablet
+$TABLET_FONT_SIZE: 18px
+
+// Desktop
+$DESKTOP_FONT_SIZE: 20px
+
+// Cinema
+$CINEMA_FONT_SIZE: 22px
+
+
+
+//----------------------------------------
+// Breakpoints
+//----------------------------------------
+
+$PHABLET_BREAKPOINT: 400px
+$TABLET_BREAKPOINT: 600px
+$DESKTOP_BREAKPOINT: 900px
+$CINEMA_BREAKPOINT: 1200px
+
+
+
+//----------------------------------------
+// Media Queries
+//----------------------------------------
+
+$PRINT_QUERY: "print"
+$MOBILE_QUERY: "all and (max-width:#{$PHABLET_BREAKPOINT})"
+$PHABLET_QUERY: "all and (min-width:#{$PHABLET_BREAKPOINT})"
+$TABLET_QUERY: "all and (min-width:#{$TABLET_BREAKPOINT})"
+$DESKTOP_QUERY: "all and (min-width:#{$DESKTOP_BREAKPOINT})"
+$CINEMA_QUERY: "all and (min-width:#{$CINEMA_BREAKPOINT})"
+
+$PORTRAIT_QUERY: "only screen and (orientation:portrait)"
+$LANDSCAPE_QUERY: "only screen and (orientation:landscape)"
+$RETINA_QUERY: "(-webkit-min-device-pixel-ratio:2), (min-resolution: 192dpi)"
+
+
 
 //----------------------------------------
 // Colours
 //----------------------------------------
 
-$CHARCOAL: #222222
+// Greyscale
+$BLACK: #000000
+$WHITE: #FFFFFF
+
+
 
 //----------------------------------------
 // Font Families
 //----------------------------------------
 
-$HELVETICA_FONT_FAMILY: "Helvetica Neue", Arial, sans-serif
+$ICONS_FONT_FAMILY: "icons"
+
+
 
 //----------------------------------------
 // Font Weights
@@ -55,26 +123,32 @@ $THIN: 100
 $LIGHT: 200
 $REGULAR: 400
 $MEDIUM: 500
+$SEMIBOLD: 600
 $BOLD: 700
-$BLACK: 800
+
+
 
 //----------------------------------------
-// Defaults
-//----------------------------------------
-
-$DEFAULT_FONT_FAMILY: $HELVETICA_FONT_FAMILY
-$DEFAULT_FONT_SIZE: $BASE_FONT_SIZE
-$DEFAULT_TEXT_COLOR: $CHARCOAL
-
-//----------------------------------------
-// Directions & Alignments
+// Directions
 //----------------------------------------
 
 $LEFT: left
 $RIGHT: right
 $UP: up
 $DOWN: down
+
+
+
+//----------------------------------------
+// Alignments
+//----------------------------------------
+
+$LEFT: left
+$RIGHT: right
 $CENTER: center
+$JUSTIFY: justify
+
+
 
 //----------------------------------------
 // Targets
@@ -83,3 +157,22 @@ $CENTER: center
 $INLINE: inline
 $BEFORE: before
 $AFTER: after
+
+
+
+//----------------------------------------
+// Orientations
+//----------------------------------------
+
+$HORIZONTAL: horizontal
+$VERTICAL: vertical
+
+
+
+//----------------------------------------
+// Animation
+//----------------------------------------
+
+$BUTTON_STATIC: 0.6s $easeOutQuart
+$BUTTON_HOVER: 0.2s $easeOutQuart
+$BUTTON_TAP: 0.05s $easeOutQuad

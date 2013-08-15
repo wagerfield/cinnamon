@@ -1,131 +1,99 @@
 //============================================================
 //
-// Mixins
+// Cinnamon: Mixins
 //
 // @description Defines project related variables and mixins
+//
 // @version 1.00
 //
-// @author matthew@wagerfield.com (Matthew Wagerfield)
+// @author Matthew Wagerfield @mwagerfield
 //
 // ---------- INDEX ----------
 //
-// @mixin spritesheet
-// @mixin graphic
-// @mixin text
+// @function strip
+// @function px-from-percent
+// @function modular-scale
+//
+// @mixin font-face
+// @mixin clearfix
+// @mixin icon
 // @mixin antialias
-// @mixin pseudo-element
-// @mixin overlay
+// @mixin font-smoothing
+// @mixin font-feature-settings
+// @mixin selection
+// @mixin keyframes
 //
 //============================================================
 
-
-
-//============================================================
-//
-// spritesheet
-//
-// @param x               :  px, em, %
-// @param y               :  px, em, %
-// @param repeat          :  repeat, no-repeat
-//
-//============================================================
-
-=spritesheet($x: 0px, $y: 0px, $repeat: no-repeat)
-  background: transparent url("#{$GRAPHICS}spritesheet.png") $x $y $repeat
+@function strip($value)
+  @return $value / ($value * 0 + 1)
 
 
 
 //============================================================
 //
-// graphic
+// font-face
 //
-// @param width           :  px
-// @param height          :  px
-// @param originX         :  px
-// @param originY         :  px
-// @param indexX          :  Number
-// @param indexY          :  Number
-// @param offsetX         :  px
-// @param offsetY         :  px
-// @param target          :  @Inline | @Before | @After
+// @param folder        : string
+// @param family        : string
+// @param weight        : normal | bold | 100 | 200 | 300...
+// @param style         : normal | italic
 //
 //============================================================
 
-=crop($width, $height, $originX, $originY, $indexX, $indexY, $offsetX, $offsetY)
-  +spritesheet(($originX - $width * $indexX), ($originY - $height * $indexY))
-  position: absolute
-  display: block
-  height: $height
-  width: $width
-  left: $offsetX
-  top: $offsetY
-
-=graphic($width, $height, $originX, $originY, $indexX, $indexY, $offsetX, $offsetY, $target)
-
-  // Inline
-  @if $target == $INLINE
-    +crop($width, $height, $originX, $originY, $indexX, $indexY, $offsetX, $offsetY)
-
-  // Before
-  @if $target == $BEFORE
-    position: relative
-    &:before
-      +crop($width, $height, $originX, $originY, $indexX, $indexY, $offsetX, $offsetY)
-      content: ""
-
-  // After
-  @if $target == $AFTER
-    position: relative
-    &:after
-      +crop($width, $height, $originX, $originY, $indexX, $indexY, $offsetX, $offsetY)
-      content: ""
+=font-face($folder, $file, $family, $weight: normal, $style: normal)
+  $EOT_PATH: "#{$FONTS_PATH}#{$folder}/#{$file}.eot"
+  $EOT_FORMAT: "embedded-opentype"
+  $WOFF_PATH: "#{$FONTS_PATH}#{$folder}/#{$file}.woff"
+  $WOFF_FORMAT: "woff"
+  $TTF_PATH: "#{$FONTS_PATH}#{$folder}/#{$file}.ttf"
+  $TTF_FORMAT: "truetype"
+  $SVG_PATH: "#{$FONTS_PATH}#{$folder}/#{$file}.svg"
+  $SVG_FORMAT: "svg"
+  font-family: $family
+  src: url($EOT_PATH)
+  src: url("#{$EOT_PATH}?#iefix") format($EOT_FORMAT), url($WOFF_PATH) format($WOFF_FORMAT), url($TTF_PATH) format($TTF_FORMAT), url("#{$SVG_PATH}##{$file}") format($SVG_FORMAT)
+  font-weight: $weight
+  font-style: $style
 
 
 
 //============================================================
 //
-// rem
-//
-// @param key               : property
-// @param px                : pixel value
+// clearfix
 //
 //============================================================
 
-=rem($key, $px)
-  #{$key}: $px
-  #{$key}: $px / $remRatio
+=clearfix()
+  zoom: 1
+  &:after,
+  &:before
+    display: table
+    content: ""
+  &:after
+    clear: both
 
 
 
 //============================================================
 //
-// text
+// icon
 //
-// @param family            : defaultFontFamily
-// @param size              : defaultFontSize
-// @param color             : defaultTextColor
-// @param weight            : normal | bold | number
-// @param style             : normal | italic
-// @param decoration        : none | underline | strikethrough
-// @param lineHeight        : normal | pixel value
-// @param variant           : normal | small-caps | inherit
+// @param folder        : string
+// @param family        : string
+// @param weight        : normal | bold | 100 | 200 | 300...
+// @param style         : normal | italic
 //
 //============================================================
 
-=text($family: $DEFAULT_FONT_FAMILY, $size: $DEFAULT_FONT_SIZE, $color: $DEFAULT_TEXT_COLOR, $weight: normal, $style: normal, $decoration: none, $lineHeight: normal, $variant: normal)
-
-  $lineHeightType: type-of($lineHeight)
-  $calculatedFontSize: $size / $BASE_FONT_SIZE
-  $calculatedLineHeight: null
-
-  @if $lineHeightType == number
-    $calculatedLineHeight: #{$lineHeight / $BASE_FONT_SIZE}rem
-  @else
-    $calculatedLineHeight: $lineHeight
-
-  font: $style $variant $weight #{$calculatedFontSize}rem / $calculatedLineHeight $family
-  text-decoration: $decoration
-  color: $color
+=icon($character, $size: 1.0em)
+  content: $character
+  font-family: $ICONS_FONT_FAMILY
+  text-transform: none
+  font-weight: normal
+  font-style: normal
+  line-height: 1.0em
+  font-size: $size
 
 
 
@@ -133,12 +101,65 @@
 //
 // antialias
 //
-// @param value         : true | false
+// @param value         : none | auto | antialiased | subpixel-antialiased
 //
 //============================================================
 
-=antialias($value: true)
-  @if $value == true
-    -webkit-font-smoothing: antialiased
-  @else
-    -webkit-font-smoothing: auto
+=font-smoothing($value: auto)
+  -webkit-font-smoothing: $value
+
+
+
+//============================================================
+//
+// font-feature-settings
+//
+// @param value         : "liga", "dlig", "onum", "pnum", etc.
+//
+// @see http://www.microsoft.com/typography/otspec/featurelist.htm
+//
+//============================================================
+
+=font-feature-settings($value)
+  -webkit-font-feature-settings: $value
+
+
+
+//============================================================
+//
+// selection
+//
+// @param fill          : hex
+// @param text          : hex
+//
+//============================================================
+
+=selection($fill, $text)
+  ::selection
+    text-shadow: none
+    background: $fill
+    color: $text
+  ::-moz-selection
+    text-shadow: none
+    background: $fill
+    color: $text
+
+
+
+//============================================================
+//
+// keyframes
+//
+// @param name          : string
+//
+//============================================================
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content

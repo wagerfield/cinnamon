@@ -1,39 +1,46 @@
 //============================================================
 //
-// Global Styles
+// Cinnamon: Global Styles
 //
 // @description Global styling
 // @version 1.00
 //
-// @author matthew@wagerfield.com (Matthew Wagerfield)
+// @author Matthew Wagerfield @mwagerfield
 //
 // ---------- INDEX ----------
 //
-// Elements
 // Selection
+// Elements
+// Enhancements
 //
 //============================================================
+
++selection(#F00, #00F)
+
+
 
 //----------------------------------------
 // Elements
 //----------------------------------------
 
 html
-  font-family: $DEFAULT_FONT_FAMILY
-  font-size: $BASE_FONT_SIZE
+  font-size: $MOBILE_FONT_SIZE
 
 body
-  color: $DEFAULT_TEXT_COLOR
-  +antialias(true)
+  text-rendering: optimizeLegibility
 
 
 
 //----------------------------------------
-// Selection
+// Enhancements
 //----------------------------------------
 
-::selection,
-::-moz-selection
-  background: #66DDFF
-  text-shadow: none
-  color: #FFFFFF
+.ua-desktop,
+.ua-mobile-ipod,
+.ua-mobile-ipad,
+.ua-mobile-iphone
+
+  .accelerate
+    +transform("translate3d(0,0,0)")
+    +transform-style("preserve-3d")
+    +backface-visibility("hidden")
