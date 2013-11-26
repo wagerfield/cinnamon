@@ -59,7 +59,7 @@ class Utils
   @scrollTop = () -> setTimeout ( -> window.scrollTo 0, 0), 0
 
   ###
-  # Scrolls the window to 0 to hide the browser menu bar.
+  # Gives a CSS property to an element.
   # @param {DOM} element DOM element.
   # @param {string} property Property to set.
   # @param {value} value Property value.
